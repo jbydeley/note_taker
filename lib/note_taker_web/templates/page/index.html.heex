@@ -1,0 +1,7 @@
+<ul>
+<%= for note <- @notes do %>
+  <li><%= link note.title, to: Routes.page_path(@conn, :show, note) %></li>
+<% end %>
+</ul>
+
+<%= link "New", to: Routes.page_path(@conn, :new) %>
